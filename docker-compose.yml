@@ -1,0 +1,18 @@
+version: '3'
+#volumes:
+  #vendor:
+services:
+  web:
+    build: .
+    volumes:
+      - ".:/var/www/symfony"
+      #- "node_modules:/app/node_modules"
+    ports:
+      - "80"
+    restart: always
+    # command: ["npm", "run", "start"]
+    # command: ["gatsby","develop", "-H", "0.0.0.0"]
+  #db:
+    #image: mysql:8
+    #volumes:
+      #- db
